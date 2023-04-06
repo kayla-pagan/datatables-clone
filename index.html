@@ -6,9 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="index.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-        <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+        <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/af-2.5.3/b-2.3.6/b-html5-2.3.6/cr-1.6.2/date-1.4.0/fc-4.2.2/fh-3.3.2/kt-2.8.2/r-2.4.1/rg-1.3.1/rr-1.3.3/sc-2.1.1/sb-1.4.2/sp-2.1.2/datatables.min.css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     </head>
 
 
@@ -592,17 +593,15 @@
 
 
                 <ul class="tabs">
-                    <li class="active">Javascript</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li class="d-none">Ajax</li>
-                    <li class="d-none">Server-side script</li>
-                    <li class="comment-count">Comments <span class="comment_count">(0)</span></li>
+                    <li id="js-tab" class="active">Javascript</li>
+                    <li id="html-tab">HTML</li>
+                    <li id="css-tab">CSS</li>
+                    <li id="comment-tab" class="comment-count">Comments <span class="comment_count">(0)</span></li>
                 </ul>
-                <div class="tabs d-block" style="clear: both; margin-top: -1px; font-size: 1.5em; border-radius: 5px;">
-                    <div class="js mt-1" style="padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 2px 2px 2px #bbb;">
+                <div class="tabs">
+                    <div id="js-content" class="js mt-1 d-block">
                         <p>The Javascript shown below is used to initialise the table shown in this example:</p>
-                        <div id="highlighter" class="syntax-highlighter js">
+                        <div id="highlighter-js" class="syntax-highlighter js">
                             <div class="toolbar">
                                 <span>
                                     <a href="#" class="toolbar-item command-lang lang">Javascript</a>
@@ -640,17 +639,65 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p></p>
-                        <ul></ul>
+                        <p>
+                            In addition to the above code, the following Javascript library files are loaded for use in this example:</p>
+                        <ul class="d-block border-0" style="list-style: disc; padding-left: 2rem; margin-bottom: 1rem;">
+                            <li>
+                                <a href="https://code.jquery.com/jquery-3.5.1.js">
+                                    https://code.jquery.com/jquery-3.5.1.js</a>
+                            </li>
+                            <li>
+                                <a href="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js">
+                                    https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="table d-none"></div>
-                    <div class="css d-none"></div>
-                    <div class="ajax d-none"></div>
-                    <div class="php d-none"></div>
-                    <div class="comments d-none"></div>
+                    <div id="html-content" class="table d-none">
+                        
+                    </div>
+                    <div id="css-content" class="css d-none">
+                        
+                    </div>
+                    <div id="comment-content" class="comments d-none">
+                        No comments posted for this page yet. Be the first to contribute!
+                        <div class="comment-add">
+                            <h3>Post new comment</h3>
+                            <p>
+                                Contributions in the form of tips, code snippets and suggestions for the above material are very welcome. 
+                                To post a comment, please use the form below. Text is formatted by 
+                                <a href="">Markdown</a>.
+                            </p>
+                            <p>
+                                To post comments, pleaes sign in to your DataTables account, or register:
+                            </p>
+                            <p></p>
+                            <ul class="formatting">
+                                <li>
+                                    <a href="https://datatables.net/forums/entry/signin?Target=https%3A%2F%2Fwww.datatables.net%2Fexamples%2Fbasic_init%2Fzero_configuration.html" 
+                                    target="_blank">Sign in</a>
+                                </li>
+                                <li>
+                                    <a href="https://datatables.net/forums/entry/register?Target=https%3A%2F%2Fwww.datatables.net%2Fexamples%2Fbasic_init%2Fzero_configuration.html"
+                                     target="_blank">Register</a>
+                                </li>
+                            </ul>
+                            <p>
+                                <b>Any questions poster here will be deleted without being published.</b>
+                                <br>
+                                Please post questions in the <a href="https://www.datatables.net/forums/" 
+                                target="_blank">Forums</a>. Comments are moderated.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <h2>Other examples</h2>
+                <div class="toc">
+
                 </div>
             </main>    
         </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/v/dt/dt-1.13.4/af-2.5.3/b-2.3.6/b-html5-2.3.6/cr-1.6.2/date-1.4.0/fc-4.2.2/fh-3.3.2/kt-2.8.2/r-2.4.1/rg-1.3.1/rr-1.3.3/sc-2.1.1/sb-1.4.2/sp-2.1.2/datatables.min.js"></script>
+        <script src="index.js"></script>
     </body>
-    <script src="index.js"></script>
 </html>
