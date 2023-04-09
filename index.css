@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 div, 
@@ -107,7 +107,7 @@ div.tabs {
     clear: both;
     margin-top: -1px;
     display: block;
-    font-size: 1.45em;
+    font-size: 1em;
     font-family: "Helvetica Neue",HelveticaNeue,Arial,Helvetica,sans-serif;
     border-radius: 5px;
 }
@@ -164,6 +164,7 @@ ul.tabs li:before {
 
 div.tabs > div > ul > li {
     display: list-item;
+    list-style: disc;
 }
 
 div.tabs > div > p:first-child {
@@ -172,6 +173,35 @@ div.tabs > div > p:first-child {
 
 div.tabs > div > p {
     margin-bottom: 1rem;
+}
+
+div.comments div.comment-add {
+    padding: 1em;
+    margin-top: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+div.comments div.comment-add h3 {
+    margin-top: 0 !important;
+    margin-bottom: 0.5em !important;
+}
+
+ol.markdown li, 
+ol.formatting li, 
+ul.markdown li, 
+ul.formatting li {
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0.5em 0.5em;
+}
+
+ol.markdown li:nth-child(2), 
+ol.formatting li:nth-child(2), 
+ul.markdown li:nth-child(2),
+ul.formatting li:nth-child(2) {
+    border-bottom: none;
 }
 
 .syntax-highlighter a,
@@ -345,8 +375,13 @@ ul.formatting {
     margin-bottom: 0.5em !important;
 }
 
+div.toc-group {
+    display: inline-block;
+    width: 100%;
+}
+
 div.toc ul {
-    color: #4e6ca3 !important;
+    color: #069 !important;
     list-style-type: none;
     padding-left: 0;
     text-decoration: none;
@@ -360,6 +395,15 @@ div.toc li {
     padding: 0.2em 1em;
     border-left: 4px solid rgba(0,0,0,0);
     border-bottom: 1px solid #e6e6e6;
+}
+
+div.fw-container {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    clear: both;
+    padding: 0 1em 3em 0;
+    box-sizing: border-box;
 }
 
 div.fw-footer {
@@ -403,24 +447,8 @@ p:last-child {
 }
 
 div.nav-main>ul>li:nth-child(1):before, 
-div.nav-main>ul>li:nth-child(1):before {
-    content: "Using DataTables";
-    margin-top: 0.3333em;
-    display: block;
-}
-
 div.nav-main>ul>li:nth-child(6):before, 
-div.nav-main>ul>li:nth-child(6):before {
-    content: "More Help";
-    display: block;
-}
-
 div.nav-main>ul>li:nth-child(10):before, 
-div.nav-main>ul>li:nth-child(10):before {
-    content: "Get DataTables";
-    display: block;
-}
-
 div.nav-main>ul>li:nth-child(1):before, 
 div.nav-main>ul>li:nth-child(6):before, 
 div.nav-main>ul>li:nth-child(10):before {
@@ -431,9 +459,22 @@ div.nav-main>ul>li:nth-child(10):before {
     letter-spacing: 1px;
     padding-bottom: 3px;
     border-bottom: 1px solid #ddd;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(221, 221, 221);
+}
+
+div.nav-main>ul>li:nth-child(1):before, 
+div.nav-main>ul>li:nth-child(1):before {
+    content: "Using DataTables";
+    margin-top: 0.3333em;
+}
+
+div.nav-main>ul>li:nth-child(6):before, 
+div.nav-main>ul>li:nth-child(6):before {
+    content: "More Help";
+}
+
+div.nav-main>ul>li:nth-child(10):before, 
+div.nav-main>ul>li:nth-child(10):before {
+    content: "Get DataTables";
 }
 
 div.fw-nav li.active, 
@@ -441,6 +482,24 @@ div.fw-nav li.sub-active,
 li.active, 
 li.sub-active {
     background-color: rgba(200,200,200,.1);
+}
+
+div.fw-container div.fw-sidebar div.nav-main>ul>li>a, 
+div.fw-container div.fw-nav div.nav-main>ul>li>a {
+    font-weight: bold;
+}
+
+div.fw-nav a, 
+div.fw-page-nav a {
+    display: block;
+    padding: 0.33em 5em 0.33em 0.5em;
+    color: #069;
+}
+
+div.fw-nav ul li li, 
+div.fw-page-nav ul li li {
+    text-indent: 2em;
+    font-size: .9em;
 }
 
 div.fw-nav ul li, 
@@ -456,6 +515,28 @@ div.fw-page-nav ul li {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+div.fw-nav li.active a, 
+div.fw-nav li.sub-active a, 
+div.fw-page-nav li.active a, 
+div.fw-page-nav li.sub-active a {
+    border-right: 4px solid #ddd;
+}
+
+div.fw-nav li.active a, 
+div.fw-nav li.sub-active a, 
+div.fw-page-nav li.active a, 
+div.fw-page-nav li.sub-active a {
+    border-right: 4px solid #ddd;
+}
+
+div.fw-nav li.active>a, 
+div.fw-page-nav li.active>a {
+    border-right: 4px solid #458ae0 !important;
+    background-color: rgba(200,200,200,.4);
+    color: #000;
+}
+
 
 
 

@@ -1,4 +1,4 @@
-$(document).ready(function () {
-    $('#example').DataTable();
+document.addEventListener('DOMContentLoaded', function () {
+    let table = new DataTable('#example');
 });
 
